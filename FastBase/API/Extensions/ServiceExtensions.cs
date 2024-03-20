@@ -1,12 +1,18 @@
-﻿using Application.Interface;
-using Application.Mapping;
+﻿using Application.Mapping;
 using Domain.Admin;
-using Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using Application.Interface.Repository;
 using Infrastructure.Repository;
+using Application.Interface.Admin;
+using Application.Interface.Email;
+using Application.Interface.Core;
+using Application.Interface.Token;
+using Infrastructure.Services.Admin;
+using Infrastructure.Services.Email;
+using Infrastructure.Services.Core;
+using Infrastructure.Services.Token;
 
 namespace API.Extensions
 {

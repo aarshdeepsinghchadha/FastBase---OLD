@@ -1,16 +1,16 @@
 ﻿using Application.Common;
-using Application.Interface;
+using Application.Interface.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Services
+namespace Infrastructure.Services.Core
 {
     public class ResponseGeneratorService : IResponseGeneratorService
     {
-         /// <summary>
+        /// <summary>
         /// Generates a response asynchronously without additional data.
         /// </summary>
         /// <param name="status">The status indicating the success or failure of the operation.</param>

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Interface
+namespace Application.Interface.Admin
 {
     /// <summary>
     /// Interface for providing administrative services related to users.

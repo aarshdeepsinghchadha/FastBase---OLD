@@ -1,5 +1,5 @@
 ﻿using Application.Admin;
-using Application.Interface;
+using Application.Interface.Admin;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

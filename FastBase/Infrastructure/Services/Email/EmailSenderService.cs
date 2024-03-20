@@ -1,5 +1,6 @@
 ﻿using Application.Common;
-using Application.Interface;
+using Application.Interface.Core;
+using Application.Interface.Email;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using RestSharp;
@@ -13,7 +14,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Services
+namespace Infrastructure.Services.Email
 {
     public class EmailSenderService : IEmailSenderService
     {

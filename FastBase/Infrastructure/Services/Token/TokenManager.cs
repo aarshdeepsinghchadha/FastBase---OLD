@@ -1,4 +1,4 @@
-﻿using Application.Interface;
+﻿using Application.Interface.Token;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Options;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Services
+namespace Infrastructure.Services.Token
 {
     public class TokenManager : ITokenManager
     {

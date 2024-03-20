@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Interface
+namespace Application.Interface.Token
 {
     /// <summary>
     /// Interface for token-related operations.

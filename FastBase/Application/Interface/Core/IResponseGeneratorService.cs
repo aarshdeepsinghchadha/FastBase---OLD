@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Interface
+namespace Application.Interface.Core
 {
     /// <summary>
     /// Interface for generating response objects based on the provided parameters.

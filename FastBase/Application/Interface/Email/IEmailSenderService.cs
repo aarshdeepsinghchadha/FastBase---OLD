@@ -1,6 +1,6 @@
 ﻿using Application.Common;
 
-namespace Application.Interface
+namespace Application.Interface.Email
 {
     /// <summary>
     /// Interface for sending emails using different email services.

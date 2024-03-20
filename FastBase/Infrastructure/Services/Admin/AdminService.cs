@@ -1,7 +1,9 @@
 ﻿using Application.Admin;
 using Application.Common;
-using Application.Interface;
+using Application.Interface.Admin;
+using Application.Interface.Core;
 using Application.Interface.Repository;
+using Application.Interface.Token;
 using Domain.Admin;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -16,7 +18,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Services
+namespace Infrastructure.Services.Admin
 {
     public class AdminService : IAdminService
     {
@@ -52,7 +54,7 @@ namespace Infrastructure.Services
 
                 ReturnResponse result = await _adminRepository.LoginUserAsync(loginDto);
                 return result;
-               
+
             }
             catch (Exception ex)
             {
@@ -80,7 +82,7 @@ namespace Infrastructure.Services
 
                 ReturnResponse result = await _adminRepository.RegisterUserAsync(registerDto, origin);
                 return result;
-                
+
             }
             catch (Exception ex)
             {
@@ -129,7 +131,7 @@ namespace Infrastructure.Services
         /// <returns>A <see cref="ReturnResponse"/> containing the refreshed token.</returns>
         public async Task<ReturnResponse<RefreshResponseDto>> RefreshTokenServiceAsync(RefreshTokenDto refreshTokenDto)
         {
-            if(refreshTokenDto == null)
+            if (refreshTokenDto == null)
             {
                 await _responseGeneratorService.GenerateResponseAsync(false, StatusCodes.Status400BadRequest, "Please pass the details to refresh token");
             }
@@ -191,11 +193,11 @@ namespace Infrastructure.Services
         {
             try
             {
-                if(resetPasswordDto == null)
+                if (resetPasswordDto == null)
                 {
                     await _responseGeneratorService.GenerateResponseAsync(false, StatusCodes.Status400BadRequest, "Please pass the details to reset the password");
                 }
-                else if(resetPasswordDto.NewPassword == null || resetPasswordDto.NewConfirmPassword == null || resetPasswordDto.OTP == null || resetPasswordDto.Email == null)
+                else if (resetPasswordDto.NewPassword == null || resetPasswordDto.NewConfirmPassword == null || resetPasswordDto.OTP == null || resetPasswordDto.Email == null)
                 {
                     await _responseGeneratorService.GenerateResponseAsync(false, StatusCodes.Status400BadRequest, "Please recheck and pass the details to refresh token");
                 }
@@ -219,7 +221,7 @@ namespace Infrastructure.Services
         {
             try
             {
-                if(resendEmailVerificationLinkDto.Email == null)
+                if (resendEmailVerificationLinkDto.Email == null)
                 {
                     await _responseGeneratorService.GenerateResponseAsync(false, StatusCodes.Status400BadRequest, "Please pass the email");
                 }

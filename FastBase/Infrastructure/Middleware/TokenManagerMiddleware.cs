@@ -1,4 +1,4 @@
-﻿using Application.Interface;
+﻿using Application.Interface.Token;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;

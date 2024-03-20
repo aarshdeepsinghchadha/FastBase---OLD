@@ -1,6 +1,7 @@
 ﻿using Application.Admin;
 using Application.Common;
-using Application.Interface;
+using Application.Interface.Core;
+using Application.Interface.Token;
 using Domain.Admin;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -12,7 +13,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Infrastructure.Services
+namespace Infrastructure.Services.Token
 {
     public class TokenService : ITokenService
     {
@@ -203,7 +204,7 @@ namespace Infrastructure.Services
                 return await _responseGeneratorService.GenerateResponseAsync<DecodeTokenDto>(false, StatusCodes.Status500InternalServerError, ex.Message, null);
             }
         }
-        
+
         /// <summary>
         /// Decodes a token asynchronously.
         /// </summary>
